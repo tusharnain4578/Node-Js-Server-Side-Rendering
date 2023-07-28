@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const products = require("../json/products.json");
 
 class HomeController {
   homeView = (req, res) => {
@@ -18,6 +19,10 @@ class HomeController {
 
   contactUsView = (req, res) => {
     res.render("contact_us");
+  };
+
+  productsView = (req, res) => {
+    res.render("products", { products });
   };
 }
 

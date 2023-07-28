@@ -8,6 +8,7 @@ const Home = require("./Controllers/HomeController");
 router.get("/", authMiddleware, Home.homeView);
 router.get("/about", authMiddleware, Home.aboutView);
 router.get("/contact-us", authMiddleware, Home.contactUsView);
+router.get("/products", authMiddleware, Home.productsView);
 
 router.get("/signup", noAuthMiddleware, Auth.signupView);
 router.get("/login", noAuthMiddleware, Auth.loginView);

@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+    <div class="container mt-5 px-5">
+        <h1 class="title">Products</h1>
+        <div class="columns is-centered is-multiline">
+
+
+
+
+
+            <% products.forEach(function(product) { %>
+
+                <div class="column is-one-fifth">
+                    <div class="card">
+                        <div class=" card-image">
+                            <figure class="image is-4by3">
+                                <img src="<%= product.thumbnail %>" alt="Product Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">
+                                <%= product.title %>
+                            </p>
+                            <p class="subtitle is-6">Price: $ <%= product.price %>
+                            </p>
+                            <p>
+                                <%= product.description %>
+                            </p>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="javascript:void(0)" class="card-footer-item">Buy Now</a>
+                            <a href="javascript:void(0)" class="card-footer-item">Add to Cart</a>
+                        </footer>
+                    </div>
+                </div>
+
+                <% }); %>
+
+
+        </div>
+    </div>
+
+
+
+
+    <%- include('partials/footer') %>
