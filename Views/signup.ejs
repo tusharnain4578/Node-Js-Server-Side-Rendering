@@ -1,0 +1,79 @@
+<%- include('partials/header') %>
+
+    <div class="container mt-5 px-5">
+        <div class="columns is-centered">
+            <div class="column is-half">
+
+
+                <h1 class="title">Registration Form (Signup)</h1>
+
+                <% if (sgError) { %>
+                    <div class="notification is-danger">
+                        <button class="delete"></button>
+                        <%= sgError %>
+                    </div>
+
+                    <% } %>
+
+
+                        <form id="signupForm" method="POST" action="/signup-post">
+
+                            <div class="field">
+                                <label class="label">Full Name</label>
+                                <div class="control has-icons-left">
+                                    <input name="name" class="input" type="text" placeholder="Enter your full name">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger"></p>
+                            </div>
+
+                            <div class="field mt-5">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left">
+                                    <input name="email" class="input" type="text" placeholder="Enter Email address">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger"></p>
+                            </div>
+
+                            <div class="field mt-5">
+                                <label class="label">Password</label>
+                                <div class="control has-icons-left">
+                                    <input name="password" class="input" type="password" placeholder="Create password">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger"></p>
+                            </div>
+
+                            <div class="field mt-5">
+                                <label class="label">Confirm Password</label>
+                                <div class="control has-icons-left">
+                                    <input name="cpassword" class="input" type="password"
+                                        placeholder="Confirm password">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger"></p>
+                            </div>
+
+
+
+
+                            <div class="field is-grouped mt-5 is-pulled-right">
+                                <div class="control">
+                                    <button id="signupBtn" type="button" class="button is-link">Register</button>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>

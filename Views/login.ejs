@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+
+    <div class="container mt-5 px-5">
+        <div class="columns is-centered">
+            <div class="column is-half">
+
+
+                <h1 class="title">Login Form</h1>
+
+                <% if (lgError) { %>
+                    <div class="notification is-danger">
+                        <button class="delete"></button>
+                        <%= lgError %>
+                    </div>
+
+                    <% } %>
+
+                        <form id="loginForm" method="POST" action="/login-post">
+
+                            <div class="field mt-5">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left">
+                                    <input name="email" class="input" type="text"
+                                        placeholder="Enter your registered Email address">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger"></p>
+                            </div>
+
+                            <div class="field mt-5">
+                                <label class="label">Password</label>
+                                <div class="control has-icons-left">
+                                    <input name="password" class="input" type="password"
+                                        placeholder="Enter your password">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger"></p>
+                            </div>
+
+
+
+                            <div class="field mt-5">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input name="keepLogin" type="checkbox">
+                                        Keep me logged in.
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                            <div class="field is-grouped mt-5 is-pulled-right">
+                                <div class="control">
+                                    <button id="loginBtn" type="button" class="button is-link">Login</button>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer') %>

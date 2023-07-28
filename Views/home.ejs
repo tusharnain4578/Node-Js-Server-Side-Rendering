@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+    <section class="hero is-fullheight">
+        <% if (lgSuccess) { %>
+            <div class="notification is-success">
+                <button class="delete"></button>
+                <%= lgSuccess %>
+            </div>
+            <% } %>
+
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <h1 class="title">Welcome, <%= name %>!</h1>
+                        <h2 class="subtitle">
+                            <%= email %>
+                        </h2>
+                    </div>
+                </div>
+    </section>
+
+    <%- include('partials/footer') %>
